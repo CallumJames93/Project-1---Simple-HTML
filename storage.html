@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Storage</title>
+</head>
+<body>
+
+	<div id="name"></div>
+
+	<!-- 
+		Session storage is removed when you close the browser.
+		Local storage will remain in your browser even after closing.
+
+		View storage in Developer Tools > Application > Storage
+	-->
+
+	<script>
+     /* LOCAL STORAGE 
+
+		if (typeof(Storage) !== "undefined") {
+		//store an item
+		localStorage.setItem('name', 'John Doe');
+
+   	// get item
+   	console.log(localStorage.name);
+
+   	// delete
+   	localStorage.removeItem('name');
+
+   	if (localStorage.name) {
+
+   		document.getElementById('name').innerHTML=localStorage.getItem('name');
+
+   	}else{
+
+   		document.getElementById('name').innerHTML="Name does not exist";
+   	}
+   } else{
+   	console.log("Local Storage is not available");
+   }
+   */
+
+
+   if (typeof(Storage) !== "undefined") {
+		//store an item
+		sessionStorage.setItem('name', 'Callum James');
+
+   	// get item
+   	console.log(sessionStorage.name);
+
+   	// delete
+   	//sessionStorage.removeItem('name');
+
+   	if (sessionStorage.name) {
+
+   		document.getElementById('name').innerHTML=sessionStorage.getItem('name');
+
+   	}else{
+
+   		document.getElementById('name').innerHTML="Name does not exist";
+   	}
+   } else{
+   	console.log("Local Storage is not available");
+   }
+</script>
+</body>
+</html>
